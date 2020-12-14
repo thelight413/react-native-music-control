@@ -220,6 +220,7 @@ public class MusicControlNotification {
                 notification = MusicControlModule.INSTANCE.notification.prepareNotification(MusicControlModule.INSTANCE.nb, false);
                 // call startForeground just after startForegroundService.
                 startForeground(MusicControlModule.INSTANCE.getNotificationId(), notification);
+                stopForeground(false);
             }
         }
 
@@ -234,6 +235,8 @@ public class MusicControlNotification {
                 }
                 notification = MusicControlModule.INSTANCE.notification.prepareNotification(MusicControlModule.INSTANCE.nb, false);
                startForeground(MusicControlModule.INSTANCE.getNotificationId(), notification);
+               stopForeground(false);
+
             }catch (Exception ex){
                 ex.printStackTrace();
             }
@@ -247,6 +250,8 @@ public class MusicControlNotification {
                 }
                 notification = MusicControlModule.INSTANCE.notification.prepareNotification(MusicControlModule.INSTANCE.nb, false);
                 startForeground(MusicControlModule.INSTANCE.getNotificationId(), notification);
+                stopForeground(false);
+
             }
             return START_NOT_STICKY;
         }
